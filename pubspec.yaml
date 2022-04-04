@@ -1,0 +1,47 @@
+name: weather
+description: A new Flutter application.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  app_settings: ^4.1.1
+  auto_route: ^3.0.2
+  connectivity: ^3.0.2
+  equatable: ^2.0.3
+  flutter_bloc: ^8.0.1
+  freezed_annotation:
+  font_awesome_flutter: ^10.1.0
+  intl: ^0.17.0
+  json_annotation: ^4.4.0
+  marquee_widget: ^1.2.0
+  pretty_dio_logger: ^1.2.0-beta-1
+  retrofit: ^3.0.1+1
+  rxdart: ^0.27.3
+  cupertino_icons: ^1.0.4
+  logger: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  auto_route_generator:
+  bloc_test: ^9.0.3
+  build_runner: ^2.1.8
+  flutter_lints: ^1.0.0
+  freezed:
+  json_serializable: ^6.1.5
+  mockito: ^5.1.0
+  retrofit_generator: ^3.0.1+1
+
+flutter:
+  generate: true
+  uses-material-design: true
+
+  assets:
+    - assets/bg/

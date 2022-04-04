@@ -1,0 +1,17 @@
+{
+  "action_search": "Cerca",
+  "action_fix": "Risolvi",
+  "error_uh_oh": "Uh oh!",
+  "error_generic": "Si è verificato un errore generico.",
+  "error_not_found": "Non sono riuscito a trovare la città ricercata: {city}",
+  "error_unauthorized": "Non è possibile soddisfare la ricerca. Permesso negato.",
+  "error_no_internet": "Non posso ottenere le informazioni senza una connessione a Internet.",
+  "error_empty_city": "Non posso cercare una città che non hai scritto.",
+  "hint_search": "Cerca...",
+  "hint_cancel": "Annulla",
+  "label_min": "Min",
+  "label_max": "Max",
+  "label_welcome": "Benvenuto!",
+  "label_search": "Ricerca una città per visualizzare il meteo.",
+  "tooltip_search": "Cerca..."
+}
