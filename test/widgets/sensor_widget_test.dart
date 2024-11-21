@@ -5,7 +5,7 @@ import 'package:weather/widgets/sensor_widget.dart';
 import '../utils/env_utils.dart';
 
 void main() {
-  testWidgets('test find title and value', (WidgetTester tester) async {
+  testWidgets('test find title and value', (tester) async {
     await tester.pumpWidget(
       EnvUtils.buildEnv(
         child: SensorWidget(
@@ -21,7 +21,7 @@ void main() {
     expect(find.byKey(const Key('sensor_value')), findsOneWidget);
   });
 
-  testWidgets('test find icon and value', (WidgetTester tester) async {
+  testWidgets('test find icon and value', (tester) async {
     await tester.pumpWidget(
       EnvUtils.buildEnv(
         child: SensorWidget(
@@ -38,7 +38,7 @@ void main() {
     expect(find.byType(Icon), findsOneWidget);
   });
 
-  testWidgets('test portrait', (WidgetTester tester) async {
+  testWidgets('test portrait', (tester) async {
     await tester.pumpWidget(
       EnvUtils.buildEnv(
         child: SensorWidget(
@@ -54,7 +54,7 @@ void main() {
     expect(find.byType(Row), findsNothing);
   });
 
-  testWidgets('test landscape', (WidgetTester tester) async {
+  testWidgets('test landscape', (tester) async {
     await tester.pumpWidget(
       EnvUtils.buildEnv(
         child: SensorWidget(

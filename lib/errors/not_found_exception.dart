@@ -4,5 +4,13 @@ class NotFoundException implements Exception {
   final String city;
 
   /// The NotFoundException constructor
-  NotFoundException(this.city);
+  const NotFoundException(this.city);
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+          other is NotFoundException && runtimeType == other.runtimeType;
+
+  @override
+  int get hashCode => runtimeType.hashCode;
 }

@@ -6,7 +6,7 @@ class OpenWeatherMapIcon extends StatelessWidget {
   final String icon;
 
   /// Constructor of the OpenWeatherMapIcon widget
-  const OpenWeatherMapIcon(this.icon, {Key? key}) : super(key: key);
+  const OpenWeatherMapIcon(this.icon, {super.key});
 
   @override
   Widget build(BuildContext context) =>

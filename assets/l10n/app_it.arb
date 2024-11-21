@@ -6,7 +6,6 @@
   "error_not_found": "Non sono riuscito a trovare la città ricercata: {city}",
   "error_unauthorized": "Non è possibile soddisfare la ricerca. Permesso negato.",
   "error_no_internet": "Non posso ottenere le informazioni senza una connessione a Internet.",
-  "error_empty_city": "Non posso cercare una città che non hai scritto.",
   "hint_search": "Cerca...",
   "hint_cancel": "Annulla",
   "label_min": "Min",

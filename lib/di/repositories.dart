@@ -1,22 +1,12 @@
 part of 'dependency_injector.dart';
 
-class _Repositories extends StatelessWidget {
-  final Widget child;
-
-  const _Repositories({
-    Key? key,
-    required this.child,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) => MultiRepositoryProvider(
-        providers: [
-          RepositoryProvider<WeatherRepository>(
-            create: (context) => WeatherRepository(
-              restClient: context.read(),
-            ),
-          ),
-        ],
-        child: child,
-      );
-}
+final List<RepositoryProvider> _repositories = [
+  RepositoryProvider<WeatherRepository>(
+    create: (context) => WeatherRepositoryImpl(
+      restClient: context.read(),
+      cityMapper: const CityMapperImpl(),
+      forecastMapper: const ForecastMapperImpl(),
+      logger: context.read(),
+    ),
+  ),
+];

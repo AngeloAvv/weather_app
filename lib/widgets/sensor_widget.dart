@@ -15,15 +15,13 @@ class SensorWidget extends StatelessWidget {
   final String value;
 
   /// The SensorWidget constructor
-  SensorWidget({
-    Key? key,
+  const SensorWidget({
+    super.key,
     this.title,
     this.icon,
     this.landscape = false,
     required this.value,
-  }) : super(key: key) {
-    assert(title != null || icon != null);
-  }
+  }) : assert(title != null || icon != null);
 
   /// The factory method to create a sensor widget in landscape
   factory SensorWidget.landscape({
@@ -41,41 +39,45 @@ class SensorWidget extends StatelessWidget {
       );
 
   @override
-  Widget build(BuildContext context) =>
-      landscape ? _landscapeWidget(context) : _portraitWidget(context);
+  Widget build(BuildContext context) => switch (landscape) {
+        true => _landscapeWidget(context),
+        false => _portraitWidget(context),
+      };
 
   Widget _portraitWidget(BuildContext context) => Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            icon ??
-                Text(
-                  title!,
-                  key: const Key('sensor_title'),
-                  style: Theme.of(context).textTheme.caption,
-                ),
-            Container(height: 8),
-            Text(
-              value,
-              key: const Key('sensor_value'),
-              style: Theme.of(context).textTheme.subtitle2,
-            ),
-          ]);
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          icon ??
+              Text(
+                title!,
+                key: const Key('sensor_title'),
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+          Container(height: 8),
+          Text(
+            value,
+            key: const Key('sensor_value'),
+            style: Theme.of(context).textTheme.titleSmall,
+          ),
+        ],
+      );
 
   Widget _landscapeWidget(BuildContext context) => Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            icon ??
-                Text(
-                  title!,
-                  style: Theme.of(context).textTheme.subtitle2?.copyWith(
-                      color: Theme.of(context).textTheme.caption?.color),
-                ),
-            Container(width: 4),
-            Text(
-              value,
-              style: Theme.of(context).textTheme.subtitle2,
-            ),
-          ]);
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          icon ??
+              Text(
+                title!,
+                style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                    color: Theme.of(context).textTheme.bodySmall?.color),
+              ),
+          Container(width: 4),
+          Text(
+            value,
+            style: Theme.of(context).textTheme.titleSmall,
+          ),
+        ],
+      );
 }

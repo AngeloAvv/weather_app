@@ -11,12 +11,11 @@
   },
   "error_unauthorized": "The search cannot be fulfilled. Permission denied.",
   "error_no_internet": "Can't get the information without an internet connection.",
-  "error_empty_city": "I can't search for a city that you didn't write.",
   "hint_search": "Search...",
   "hint_cancel": "Cancel",
   "label_min": "Min",
   "label_max": "Max",
   "label_welcome": "Welcome!",
-  "label_search": "Search for a city to view the weather.",
+  "label_search": "Search for a city to check the weather.",
   "tooltip_search": "Search..."
 }
